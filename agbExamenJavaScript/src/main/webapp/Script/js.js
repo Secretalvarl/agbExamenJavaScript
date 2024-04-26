@@ -17,7 +17,7 @@ function anyadir() {
 
 	let fechaSalida = new Date(fechaEntrada);
 
-	let envio = {nombreCliente: nombreCliente, costeEnvio: costeEnvio, fechaEntrada: fechaEntrada.toLocaleDateString(), fechaSalida: fechaSalida};
+	let envio = {nombreCliente: nombreCliente, costeEnvio: costeEnvio, fechaEntrada: fechaEntrada, fechaSalida: fechaSalida};
 
 	envios.push(envio);
 
@@ -45,6 +45,8 @@ function quitar() {
 		if (envios[i].nombreCliente === nombreEliminar) {
 
 			eliminar = i;
+			
+			envios.splice(eliminar);
 			break;
 		}
 	}
